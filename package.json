@@ -1,0 +1,22 @@
+{
+  "name": "cloudy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.3",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "electron-localshortcut": "^3.2.1",
+    "electron-store": "^8.2.0"
+  }
+}
