@@ -9,7 +9,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "build": {
+    "appId": "com.notflask.cloudy",
+    "productName": "Cloudy",
+    "asar": true,
+    "win": {
+      "icon": "assets/soundcloud-win.ico"
+    }
+  },
   "devDependencies": {
     "electron": "^29.1.3",
     "electron-builder": "^24.13.3"

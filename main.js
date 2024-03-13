@@ -28,7 +28,7 @@ function toggleDarkMode() {
 
 const createWindow = async () => {
     win = new BrowserWindow({
-        width: 1280,
+        width: 1250,
         height: 720,
         webPreferences: {
             nodeIntegration: false,
@@ -39,6 +39,17 @@ const createWindow = async () => {
     win.loadURL("https://soundcloud.com/discover")
 
     win.webContents.on("did-finish-load", async () => {
+        await win.webContents.insertCSS(`
+        html, body { 
+            overflow: auto !important;
+            scrollbar-width: none;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+          }
+        `)
+
         if (store.get("darkMode")) {
             await win.webContents.insertCSS(darkModeCss)
         }
